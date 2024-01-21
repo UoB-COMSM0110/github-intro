@@ -55,9 +55,45 @@ All team members should now have permission to clone the repository and push new
 
 All team members should complete this section. 
 
+1. On your repository on GitHub click the `code dropdown`
+
+![Alt text](images/clone.png)
+
+2. Copy the HTTPS address provided
+
+![Alt text](images/clone-copy.png)
+
+3. Open VSCode
+
+4. Navigate to the Source Control tab on the left sidebar
+
+5. Select `Clone Repository`
+
+6. Paste your HTTPS address into the search bar and select the repository.
+
+7. Follow any instructions given by VSCode on cloning the repository (It may ask you to login to GitHub).
+
+VSCode should automatically open the local repository in the current browser.
+
 ## 5. Edit the README.md
 
+Each team member should try out pushing code by editing the README.md file to include their name, university email address and GitHub username. It is essential that you complete this section as this information will allow us to setup your coursework repository.
+
+Since we haven't got on to how to use branches yet, only once team member should do this section at once.
+
+1. Use VSCode to add your name, university email address and GitHub username in the format `<name>, <email>, <github-username>`. e.g. `Alex Elwood, wh20899@bristol.ac.uk, alexelwood14`
+
+2. Use the source control tab in the left sidebar to commit changes to the readme (see additional [docs](https://code.visualstudio.com/docs/sourcecontrol/overview#_commit:~:text=the%20current%20workspace.-,Commit,-Staging%20(git%20add)) if you are stuck).
+
+3. Click the Synchronize Changes button on the bottom left of the window. Once this is complete the change should be visible on GitHub
+
+4. All team members can now Synchronize Changes, and should be able to see the updated README locally.
+
+![Alt text](images/sync.png)
+
 ## 6. Send us your repository
+
+One each team member has their name, university email address and GitHub username in the README.md, send a link to repository to Alex Elwood on Teams. In the next few days we will be setting up your coursework repositories and sending out joining invites.  
 
 ## 7. Further tasks on Branches (Optional)
 
