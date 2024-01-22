@@ -8,6 +8,8 @@ By the end of this session you should have:
 - Names, GitHub Usernames Should be added to the README.
 - You should have had the chance to play around with features of GitHub and interacted with the repository using git.
 
+We recommend using a lab machine for this task as it already has Git and VSCode installed. You can of course use an IDE other than VSCode but these instructions use VSCode as an example, other IDEs should provide similar tools for interacting with Git. If you are using your own machine then you will need to [install git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+
 This will not be the same repository as the one you will use for your coursework. After this lab we will setup a repository for you using your the GitHub name that you provide us.
 
 ## 1. Create a GitHub account
@@ -96,7 +98,7 @@ Since we haven't got on to how to use branches yet, only once team member should
 
 ## 6. Send us your repository
 
-Once each team member has their name, university email address and GitHub username in the README.md, send a link to repository to Alex Elwood on Teams. In the next few days we will be setting up your coursework repositories and sending out joining invites.  
+Once each team member has their name, university email address and GitHub username in the README.md, send a link to your repository to Alex Elwood on Teams. In the next few days we will be setting up your coursework repositories and sending out joining invites.  
 
 ## 7. Further tasks on Branches (Optional)
 
