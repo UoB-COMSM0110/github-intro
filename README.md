@@ -84,7 +84,7 @@ VSCode should automatically open the local repository in the current browser.
 
 Each team member should try out pushing code by editing the README.md file to include their name, university email address and GitHub username. It is essential that you complete this section as this information will allow us to setup your coursework repository.
 
-Since we haven't got on to how to use branches yet, only once team member should do this section at once.
+Since we haven't got on to how to use branches yet, only one team member should do this section at once.
 
 1. Use VSCode to add your name, university email address and GitHub username in the format `<name>, <email>, <github-username>`. e.g. `Alex Elwood, wh20899@bristol.ac.uk, alexelwood14`
 
