@@ -5,7 +5,9 @@ Your team's github repository (repo) has been made for you in the COMSM0166 orga
 
 This introduction requires only a command line with Git installed, and a browser for interacting with GitHub.  Both of these are availabe on the lab machine.  If you would like to use your own machine then you will need to [install git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
-For the Git sections, this session is going to be using the command line.  Many IDEs (e.g. VS code) have graphical user interfaces that make the process of commiting and pushing (don't worry, these will be explained later) easier.  And of course, these are what most people use most of the time.  However, it is helpful to understand how to use Git and Github with just the command line because, when things break (and they will break), the command line is almost always how you will be fixing them.
+For the Git portion of this session I will be using the command line.  Many IDEs (e.g. VS code) have graphical user interfaces that make the process of commiting and pushing (don't worry, these will be explained later) easier.  And of course, these are what most people use most of the time.  However, it is helpful to understand how to use Git and Github with just the command line because, when things break (and they will break), the command line is almost always how you will be fixing them.
+
+Additionally, there are usually multiple ways of achieving the same goal using git.  I will be presenting one of them.  If you want to have an explore of how else you could do this, the [documentation](https://git-scm.com/docs) tells you what else you can do with the command line. 
 
 ## 1. Add SSH key to your GitHub account
 
@@ -38,28 +40,29 @@ Everyone in the team needs a local copy of the repository to work on -- so every
 
 ## 3. Make a new branch to make your changes in
 
-As there will be six team members working on your game at the same time, you don't want to be treading on each others toes every time you make a slight change.  Therefore, it is good practice to use `branches` to keep work being done on different features isolated from each other until they are finished and ready to be integrated into the main project (called the `main` branch)
+As there will be six team members working on your game at the same time, you don't want to be treading on each others toes every time you make a slight change.  Therefore, it is good practice to use `branches` to keep work being done on different features isolated from each other until they are finished and ready to be integrated into the main project (called the `main` branch).
 
-## 6. Edit the README.md
+1. We're going to make a new branch named with your name, using the following command: `git branch \<branch_name\>`.  This creates a new branch (which we can see by checking the existing branches with the command `git branch`).  
 
-Each team member should try out pushing code by editing the README.md file to include their name, university email address and GitHub username. It is essential that you complete this section as this information will allow us to setup your coursework repository.
+2. We're now going to make this new branch our working branch: `git checkout \<branch_name\>`.
 
-Since we haven't got on to how to use branches yet, only one team member should do this section at once.
+## 4. Edit the README.md
 
-1. Use VSCode to add your name, university email address and GitHub username in the format `<name>, <email>, <github-username>`. e.g. `Alex Cockrean, no22498@bristol.ac.uk, ABenC377`
+Each team member should try out pushing code by editing the README.md file to include their name, university email address and GitHub username.
 
-2. Use the source control tab in the left sidebar to commit changes to the readme (see additional [docs](https://code.visualstudio.com/docs/sourcecontrol/overview#_commit:~:text=the%20current%20workspace.-,Commit,-Staging%20(git%20add)) if you are stuck).
+1. Add your name, university email address and GitHub username in the format `<name>, <email>, <github-username>` (e.g. `Alex Cockrean, no22498@bristol.ac.uk, ABenC377`) to the README.md file, and save the changes.
 
-3. Click the Synchronize Changes button on the bottom left of the window. Once this is complete the change should be visible on GitHub
+2. Add this changed file to a new commit using the command `git add README.md`.
 
-4. All team members can now Synchronize Changes, and should be able to see the updated README locally.
+3. Now, we want to commit this change to the branch.  You can, and often do, add multiple changed files to a commit.  However, for this exercise, we're just committing this trivial change.  The command for commiting is `git commit -m "Adding name to readme"`.  A commit needs a message to help other developers identify what it is for.  We add the commit message using the `-m` flag, and providing a string for the message.  The actual message you use is entirely up to you.
 
-![Alt text](images/sync.png)
+## 5. Pushing your changes to GitHub
 
-## 7. Send us your repository
+We now need to `push` our commit to GitHub, so that it can be seen by the rest of your team.  As we've made a new branch locally which we've commited to, our command is going to be slightly more complicated than it usually would: `git push -u origin \<branch_name\>`.  The `-u origin ` here tells git that we are pushing the commit to a new remote branch with the name \<branch_name\>.  
 
-Once each team member has their name, university email address and GitHub username in the README.md, send a link to your repository to Alex Cockrean on Teams. In the next few days we will be setting up your coursework repositories and sending out joining invites.  
+Once you've set up a new branch with GitHub, the pushing process becomes a lot easier, with just a simple `git push`.
 
-## 8. Further tasks on Branches (Optional)
+## 6. Merging your branch with main
 
-The next essential feature of Git is branches. Take a look at the GitHub [documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches) on branches and have a go using branches interacting with branches in your test repository. Note: this task has a lot of overlap with Overview of Software Tools.
+
+
