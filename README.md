@@ -3,9 +3,9 @@ Software Engineering Discipline and Practice (COMSM0166) Introduction to Git &am
 
 Your team's github repository (repo) has been made for you in the COMSM0166 organisation.  If you have emailed across your team and their GitHub account names, you (plural) will have been invited to the GitHub group for your team, and through that have admin access to your team's repo.  <ins>If you have not yet sent your team members and their GitHub account names to Alex Cockrean, **do so now**</ins>.
 
-This introduction requires only a commandline with Git installed, and a browser for interacting with GitHub.  Both of these are availabe on the lab machine.  If you would like to use your own machine then you will need to [install git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+This introduction requires only a command line with Git installed, and a browser for interacting with GitHub.  Both of these are availabe on the lab machine.  If you would like to use your own machine then you will need to [install git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
-For the Git sections, this session is going to be using the commandline.  Many IDEs (e.g. VS code) have graphical user interfaces that make the process of commiting and pushing (don't worry, these will be explained later) easier.  And of course, these are what most people use most of the time.  However, it is helpful to understand how to use Git and Github with just the commandline because, when things break (and they will break), the commandline is almost always how you will be fixing them.
+For the Git sections, this session is going to be using the command line.  Many IDEs (e.g. VS code) have graphical user interfaces that make the process of commiting and pushing (don't worry, these will be explained later) easier.  And of course, these are what most people use most of the time.  However, it is helpful to understand how to use Git and Github with just the command line because, when things break (and they will break), the command line is almost always how you will be fixing them.
 
 ## 1. Add SSH key to your GitHub account
 
@@ -22,21 +22,23 @@ Your SSH keys should be found in the .ssh folder in the home directory of your c
 
 Everyone in the team needs a local copy of the repository to work on -- so everyone needs to clone it.
 
-1. On your repository on GitHub click the `code dropdown`
+1. On your repository on GitHub click the `code dropdown`.
 
 ![Alt text](images/clone.png)
 
-2. Copy the SSH address provided
+2. Copy the SSH address provided.
 
 ![Alt text](images/clone-copy.png)
 
-3. Open commandline
+3. Open command line.
 
 4. Move to the directory you want to store your repository in.
 
 5. Run the command "git clone \<copied SSH address\>"
 
-VSCode should automatically open the local repository in the current browser.
+## 3. Make a new branch to make your changes in
+
+As there will be six team members working on your game at the same time, you don't want to be treading on each others toes every time you make a slight change.  Therefore, it is good practice to use `branches` to keep work being done on different features isolated from each other until they are finished and ready to be integrated into the main project (called the `main` branch)
 
 ## 6. Edit the README.md
 
