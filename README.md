@@ -1,26 +1,15 @@
-# GitHub Intro
+# GitHub Intro -- 27th January 2026
 Software Engineering Discipline and Practice (COMSM0166) Introduction to Git &amp; GitHub.
 
-By the end of this session you should have:
-- Created a GitHub account
-- One team member should have created a repository.
-- All group members should be added to the repository.
-- Names, GitHub Usernames Should be added to the README.
-- You should have had the chance to play around with features of GitHub and interacted with the repository using git.
+Your team's github repository (repo) has been made for you in the COMSM0166 organisation.  If you have emailed across your team and their GitHub account names, you (plural) will have been invited to the GitHub group for your team, and through that have admin access to your team's repo.  <ins>If you have not yet sent your team members and their GitHub account names to Alex Cockrean, **do so now**</ins>.
 
-We recommend using a lab machine for this task as it already has Git and VSCode installed. You can of course use an IDE other than VSCode but these instructions use VSCode as an example, other IDEs should provide similar tools for interacting with Git. If you are using your own machine then you will need to [install git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+This introduction requires only a command line with Git installed, and a browser for interacting with GitHub.  Both of these are availabe on the lab machine.  If you would like to use your own machine then you will need to [install git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
-This will not be the same repository as the one you will use for your coursework. After this lab we will setup a repository for you using your the GitHub name that you provide us.
+For the Git portion of this session I will be using the command line.  Many IDEs (e.g. VS code) have graphical user interfaces that make the process of commiting and pushing (don't worry, these will be explained later) easier.  And of course, these are what most people use most of the time.  However, it is helpful to understand how to use Git and Github with just the command line because, when things break (and they will break), the command line is almost always how you will be fixing them.
 
-## 1. Create a GitHub account
+Additionally, there are usually multiple ways of achieving the same goal using git.  I will be presenting one of them.  If you want to have an explore of how else you could do this, the [documentation](https://git-scm.com/docs) tells you what else you can do with the command line. 
 
-1. Go to [GitHub](www.github.com).
-2. Click 'Sign Up' in the top right corner.
-3. Follow the instructions on the page. 
-
-*We recommend creating a GitHub account using a personal email address. This will allow you to use the account after leaving the university.*
-
-## 2. Add SSH key to your GitHub account
+## 1. Add SSH key to your GitHub account
 
 In order for your computer to communicate with GitHub securely, it's best to use SSH with GitHub. 
 1. Open drop-down menu by clicking on your profile picture in the top right.
@@ -31,86 +20,72 @@ In order for your computer to communicate with GitHub securely, it's best to use
 
 Your SSH keys should be found in the .ssh folder in the home directory of your computer, and the public keys will be in a file ending with '.pub'.  (The .ssh folder is a hidden folder, so you can cd into it normally, but it will not be visible to 'ls' unless you add the -a flag).
 
-## 3. Create a repository
+## 2. Clone your repository
 
-<ins>Only one member of your team needs to complete this section</ins> but everyone should follow along with what they are doing. (Please note, this is not the Repo that you'll be using for the games project -- I'll make that for you later this week.  This is just for you to get me your team's details).
+Everyone in the team needs a local copy of the repository to work on -- so everyone needs to clone it.
 
-1. In the upper-right corner of any page, select plus, then click New repository.
-
-![New Repository](images/new-repository.png)
-
-2. Use the 'Owner' dropdown menu to select your GitHub account as the owner of the repository.
-
-3. Choose a repository name (no need to put too much thought into this, this is just a test repository which you can delete later).
-
-![Alt text](images/repo-name.png)
-
-5. Ensure that the repository is set as `Public`
-
-4. Select `Add a README file`.
-
-5. Click `Create Repository`.
-
-## 4. Add team members to your repository
-
-Only one member of your team needs to complete this section but everyone should follow along with what they are doing.
-
-1. Navigate to the settings tab of the repository.
-
-![Alt text](images/settings.png)
-
-2. In the "Access" section of the sidebar, click `Collaborators & teams`.
-
-3. Select `Add people` and add team members by searching for their username.
-
-![Alt text](/images/manage-access.png)
-
-All team members should now have permission to clone the repository and push new or edited code.
-
-## 5. Clone your repository
-
-All team members should complete this section. 
-
-1. On your repository on GitHub click the `code dropdown`
+1. On your repository on GitHub click the `code dropdown`.
 
 ![Alt text](images/clone.png)
 
-2. Copy the SSH address provided
+2. Copy the SSH address provided.
 
 ![Alt text](images/clone-copy.png)
 
-3. Open VSCode
+3. Open command line.
 
-4. Navigate to the Source Control tab on the left sidebar
+4. Move to the directory you want to store your repository in.
 
-5. Select `Clone Repository`
+5. Run the command "git clone \<copied SSH address\>"
 
-6. Paste your HTTPS address into the search bar and select the repository.
+## 3. Make a new branch to make your changes in
 
-7. Follow any instructions given by VSCode on cloning the repository (It may ask you to login to GitHub).
+As there will be six team members working on your game at the same time, you don't want to be treading on each others toes every time you make a slight change.  Therefore, it is good practice to use `branches` to keep work being done on different features isolated from each other until they are finished and ready to be integrated into the main project (called the `main` branch).
 
-VSCode should automatically open the local repository in the current browser.
+1. We're going to make a new branch named with your name, using the following command: `git branch <branch_name>`.  This creates a new branch (which we can see by checking the existing branches with the command `git branch`).  
 
-## 6. Edit the README.md
+2. We're now going to make this new branch our working branch: `git checkout <branch_name>`.
 
-Each team member should try out pushing code by editing the README.md file to include their name, university email address and GitHub username. It is essential that you complete this section as this information will allow us to setup your coursework repository.
+## 4. Edit the README.md
 
-Since we haven't got on to how to use branches yet, only one team member should do this section at once.
+Each team member should try out pushing code by editing the README.md file to include their name, university email address and GitHub username.
 
-1. Use VSCode to add your name, university email address and GitHub username in the format `<name>, <email>, <github-username>`. e.g. `Alex Cockrean, no22498@bristol.ac.uk, ABenC377`
+1. Add your name, university email address and GitHub username in the format `<name>, <email>, <github-username>` (e.g. `Alex Cockrean, no22498@bristol.ac.uk, ABenC377`) to the README.md file, and save the changes.
 
-2. Use the source control tab in the left sidebar to commit changes to the readme (see additional [docs](https://code.visualstudio.com/docs/sourcecontrol/overview#_commit:~:text=the%20current%20workspace.-,Commit,-Staging%20(git%20add)) if you are stuck).
+2. Add this changed file to a new commit using the command `git add README.md`.
 
-3. Click the Synchronize Changes button on the bottom left of the window. Once this is complete the change should be visible on GitHub
+3. Now, we want to commit this change to the branch.  You can, and often do, add multiple changed files to a commit.  However, for this exercise, we're just committing this trivial change.  The command for commiting is `git commit -m "Adding name to readme"`.  A commit needs a message to help other developers identify what it is for.  We add the commit message using the `-m` flag, and providing a string for the message.  The actual message you use is entirely up to you.
 
-4. All team members can now Synchronize Changes, and should be able to see the updated README locally.
+## 5. Pushing your changes to GitHub
 
-![Alt text](images/sync.png)
+We now need to `push` our commit to GitHub, so that it can be seen by the rest of your team.  As we've made a new branch locally which we've commited to, our command is going to be slightly more complicated than it usually would: `git push -u origin <branch_name>`.  The `-u origin ` here tells git that we are pushing the commit to a new remote branch with the name \<branch_name\>.  
 
-## 7. Send us your repository
+Once you've set up a new branch with GitHub, the pushing process becomes a lot easier, with just a simple `git push`.
 
-Once each team member has their name, university email address and GitHub username in the README.md, send a link to your repository to Alex Cockrean on Teams. In the next few days we will be setting up your coursework repositories and sending out joining invites.  
+## 6. Create a pull request for your changes
 
-## 8. Further tasks on Branches (Optional)
+We've now made our changes to the new branch public.  Now, to get them into the `main` branch, we need to make a `pull request`.
 
-The next essential feature of Git is branches. Take a look at the GitHub [documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches) on branches and have a go using branches interacting with branches in your test repository. Note: this task has a lot of overlap with Overview of Software Tools.
+1. Go to your repository on GitHub. 
+
+2. Under the `Pull requests` tab, click new.
+
+![Alt text](images/new_PR.png)
+
+3. Now choose the two branches you want to merge.  We want to merge `<branch_name>` into `main`.  
+
+At this stage, you will see a summary of the commits being included in this pull request (in our case, only a single one), and a summary of all the file changes that are in the pull request.  
+
+4. Click the `Create pull request` button.
+
+![Alt text](images/create_pr.png)
+
+5. Now give the pull request a title and description, and click the `Create pull request` button.
+
+## 7. Reviewing and merging
+
+Now that a pull request has been made, you need to make sure that you, as a team, are happy with the changes that are being proposed.  Therefore, your team mates should review the changes.  When everyone is happy with the changes, you can hit the `Merge pull request` button, and your changes will be added to the `main` branch.
+
+Currently, there are no rules on your repositories about when and by whom a pull request can be merged.  This allows someone to make a pull request and immediately merge it by themselves without any oversight from the team.  While this is good for quick development, it is also good for bugs.  Therefore, we recommend setting up some rules in the setting of your repository to protect your main branch by requiring new pull requests to it to be approved by multiple members of the team.  While this is beyond the scope of this exercise, we recommend you read [this](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches) page about just this.
+
+# Congratulations, you've merged your first PR
