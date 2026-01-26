@@ -42,9 +42,9 @@ Everyone in the team needs a local copy of the repository to work on -- so every
 
 As there will be six team members working on your game at the same time, you don't want to be treading on each others toes every time you make a slight change.  Therefore, it is good practice to use `branches` to keep work being done on different features isolated from each other until they are finished and ready to be integrated into the main project (called the `main` branch).
 
-1. We're going to make a new branch named with your name, using the following command: `git branch \<branch_name\>`.  This creates a new branch (which we can see by checking the existing branches with the command `git branch`).  
+1. We're going to make a new branch named with your name, using the following command: `git branch <branch_name>`.  This creates a new branch (which we can see by checking the existing branches with the command `git branch`).  
 
-2. We're now going to make this new branch our working branch: `git checkout \<branch_name\>`.
+2. We're now going to make this new branch our working branch: `git checkout <branch_name>`.
 
 ## 4. Edit the README.md
 
@@ -58,11 +58,29 @@ Each team member should try out pushing code by editing the README.md file to in
 
 ## 5. Pushing your changes to GitHub
 
-We now need to `push` our commit to GitHub, so that it can be seen by the rest of your team.  As we've made a new branch locally which we've commited to, our command is going to be slightly more complicated than it usually would: `git push -u origin \<branch_name\>`.  The `-u origin ` here tells git that we are pushing the commit to a new remote branch with the name \<branch_name\>.  
+We now need to `push` our commit to GitHub, so that it can be seen by the rest of your team.  As we've made a new branch locally which we've commited to, our command is going to be slightly more complicated than it usually would: `git push -u origin <branch_name>`.  The `-u origin ` here tells git that we are pushing the commit to a new remote branch with the name \<branch_name\>.  
 
 Once you've set up a new branch with GitHub, the pushing process becomes a lot easier, with just a simple `git push`.
 
-## 6. Merging your branch with main
+## 6. Create a pull request for your changes
+
+We've now made our changes to the new branch public.  Now, to get them into the `main` branch, we need to make a `pull request`.
+
+1. Go to your repository on GitHub. 
+
+2. Under the `Pull requests` tab, click new.
+
+![Alt text](images/new_PR.png)
+
+3. Now choose the two branches you want to merge.  We want to merge `<branch_name>` into `main`.  
+
+At this stage, you will see a summary of the commits being included in this pull request (in our case, only a single one), and a summary of all the file changes that are in the pull request.  
+
+4. Click the `Create pull request` button.
+
+![Alt text](images/create_pr.png)
+
+5. Now give the pull request a title and description, and click the `Create pull request` button.
 
 
 
