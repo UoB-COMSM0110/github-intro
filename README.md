@@ -34,7 +34,7 @@ Everyone in the team needs a local copy of the repository to work on -- so every
 
 4. Move to the directory you want to store your repository in.
 
-5. Run the command "git clone <copied SSH address>"
+5. Run the command "git clone \<copied SSH address\>"
 
 VSCode should automatically open the local repository in the current browser.
 
