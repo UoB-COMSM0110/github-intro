@@ -1,26 +1,13 @@
-# GitHub Intro
+# GitHub Intro -- 27th January 2026
 Software Engineering Discipline and Practice (COMSM0166) Introduction to Git &amp; GitHub.
 
-By the end of this session you should have:
-- Created a GitHub account
-- One team member should have created a repository.
-- All group members should be added to the repository.
-- Names, GitHub Usernames Should be added to the README.
-- You should have had the chance to play around with features of GitHub and interacted with the repository using git.
+Your team's github repository (repo) has been made for you in the COMSM0166 organisation.  If you have emailed across your team and their GitHub account names, you (plural) will have been invited to the GitHub group for your team, and through that have admin access to your team's repo.  <ins>If you have not yet sent your team members and their GitHub account names to Alex Cockrean, **do so now**</ins>.
 
-We recommend using a lab machine for this task as it already has Git and VSCode installed. You can of course use an IDE other than VSCode but these instructions use VSCode as an example, other IDEs should provide similar tools for interacting with Git. If you are using your own machine then you will need to [install git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+This introduction requires only a commandline with Git installed, and a browser for interacting with GitHub.  Both of these are availabe on the lab machine.  If you would like to use your own machine then you will need to [install git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
-This will not be the same repository as the one you will use for your coursework. After this lab we will setup a repository for you using your the GitHub name that you provide us.
+For the Git sections, this session is going to be using the commandline.  Many IDEs (e.g. VS code) have graphical user interfaces that make the process of commiting and pushing (don't worry, these will be explained later) easier.  And of course, these are what most people use most of the time.  However, it is helpful to understand how to use Git and Github with just the commandline because, when things break (and they will break), the commandline is almost always how you will be fixing them.
 
-## 1. Create a GitHub account
-
-1. Go to [GitHub](www.github.com).
-2. Click 'Sign Up' in the top right corner.
-3. Follow the instructions on the page. 
-
-*We recommend creating a GitHub account using a personal email address. This will allow you to use the account after leaving the university.*
-
-## 2. Add SSH key to your GitHub account
+## 1. Add SSH key to your GitHub account
 
 In order for your computer to communicate with GitHub securely, it's best to use SSH with GitHub. 
 1. Open drop-down menu by clicking on your profile picture in the top right.
@@ -31,45 +18,9 @@ In order for your computer to communicate with GitHub securely, it's best to use
 
 Your SSH keys should be found in the .ssh folder in the home directory of your computer, and the public keys will be in a file ending with '.pub'.  (The .ssh folder is a hidden folder, so you can cd into it normally, but it will not be visible to 'ls' unless you add the -a flag).
 
-## 3. Create a repository
+## 2. Clone your repository
 
-<ins>Only one member of your team needs to complete this section</ins> but everyone should follow along with what they are doing. (Please note, this is not the Repo that you'll be using for the games project -- I'll make that for you later this week.  This is just for you to get me your team's details).
-
-1. In the upper-right corner of any page, select plus, then click New repository.
-
-![New Repository](images/new-repository.png)
-
-2. Use the 'Owner' dropdown menu to select your GitHub account as the owner of the repository.
-
-3. Choose a repository name (no need to put too much thought into this, this is just a test repository which you can delete later).
-
-![Alt text](images/repo-name.png)
-
-5. Ensure that the repository is set as `Public`
-
-4. Select `Add a README file`.
-
-5. Click `Create Repository`.
-
-## 4. Add team members to your repository
-
-Only one member of your team needs to complete this section but everyone should follow along with what they are doing.
-
-1. Navigate to the settings tab of the repository.
-
-![Alt text](images/settings.png)
-
-2. In the "Access" section of the sidebar, click `Collaborators & teams`.
-
-3. Select `Add people` and add team members by searching for their username.
-
-![Alt text](/images/manage-access.png)
-
-All team members should now have permission to clone the repository and push new or edited code.
-
-## 5. Clone your repository
-
-All team members should complete this section. 
+Everyone in the team needs a local copy of the repository to work on -- so everyone needs to clone it.
 
 1. On your repository on GitHub click the `code dropdown`
 
@@ -79,15 +30,11 @@ All team members should complete this section.
 
 ![Alt text](images/clone-copy.png)
 
-3. Open VSCode
+3. Open commandline
 
-4. Navigate to the Source Control tab on the left sidebar
+4. Move to the directory you want to store your repository in.
 
-5. Select `Clone Repository`
-
-6. Paste your HTTPS address into the search bar and select the repository.
-
-7. Follow any instructions given by VSCode on cloning the repository (It may ask you to login to GitHub).
+5. Run the command "git clone <copied SSH address>"
 
 VSCode should automatically open the local repository in the current browser.
 
